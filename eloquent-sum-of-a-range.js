@@ -13,8 +13,7 @@ function range(start,end,sign){
     return result;
 }
 
-function sum(callback){
-    let rangeArr = callback;
+function sum(rangeArr){
     let sum = 0;
     rangeArr.forEach(element => {
         sum += element;
