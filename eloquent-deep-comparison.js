@@ -15,7 +15,10 @@ function deepEqual(val1, val2) {
     }
 
     for (let key of keys1) {
-        if (!keys2.includes(key) || !deepEqual(val1[key], val2[key])) {
+        if (!keys2.includes(key)) {
+            return false;
+        }
+        if(!deepEqual(val1[key], val2[key])){
             return false;
         }
     }
@@ -23,4 +26,4 @@ function deepEqual(val1, val2) {
     return true;
 }
 
-console.log(deepEqual({here: {is: "an"}, object: 2}, {here: {is: "an"}, object: 2}));
+console.log(deepEqual({here: {is: "an"}, object: [2,2]}, {here: {is: "an"}, object: [2,2]}));
