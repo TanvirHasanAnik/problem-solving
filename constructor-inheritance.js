@@ -32,3 +32,5 @@ Tanvir.introduce();
 Tanvir.bodyShape();
 Tanvir.plays();
 
+console.log(Tanvir instanceof Athlete);
+console.log(Tanvir instanceof Person);
