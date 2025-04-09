@@ -8,5 +8,5 @@ document.body.addEventListener("mousemove", (event) => {
     document.body.appendChild(point);
     setTimeout(()=> {
         point.remove();
-    },500);
+    },200);
 })
