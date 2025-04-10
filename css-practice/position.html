@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box1 {
+        background-color: blue;
+        background-clip: content-box;
+        height: 200px;
+        width: 300px;
+        border: 1px solid black;
+        padding: 50px;
+        box-sizing: border-box;
+        display: inline-block;
+        position: relative;
+        top: 300px;
+      }
+      #box2 {
+        background-color: green;
+        background-clip: content-box;
+        height: 200px;
+        width: 300px;
+        border: 1px solid black;
+        padding: 50px;
+        box-sizing: border-box;
+        display: inline-block;
+        position: absolute;
+        left: 50px;
+        top: 200px;
+      }
+
+      #parent {
+        background-color: yellow;
+        height: 200px;
+        width: 300px;
+        border: 1px solid black;
+        padding: 10px;
+        box-sizing: border-box;
+        display: inline-block;
+        position: absolute;
+      }
+
+      #childBox {
+        background-color: orange;
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        padding: 10px;
+        box-sizing: border-box;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1"><h1>Relative</h1></div>
+    <div id="box2"><h1>Absolute from body</h1></div>
+    <div id="parent">
+      <div id="childBox">
+        <h5>Absolute from div parent</h5>
+      </div>
+    </div>
+  </body>
+</html>
