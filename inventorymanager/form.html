@@ -22,16 +22,21 @@
         <header>This is header</header>
         <h1>Form</h1>
         <form action="product.html">
-            <label>Text</label>
+            <label for="text">Text</label>
             <input type="text" placeholder="text" name="text" id="text" required><br>
-            <label>Email</label>
+
+            <label for="email">Email</label>
             <input type="email" placeholder="email" name="email" id="email"><br>
-            <label>password</label>
+
+            <label for="password">password</label>
             <input type="password" placeholder="password" name="password" id="password"><br>
-            <label>Number</label>
+
+            <label for="number">Number</label>
             <input type="number" placeholder="number" name="number" id="number"><br>
-            <label>Range</label>
-            <input type="range" placeholder="range" name="range" id="range"><br>
+
+            <label for="range">Range</label>
+            <input type="range" placeholder="range" name="range" id="range" min="0" max="100" value="50"><br>
+
             <button type="submit">Submit</button>
         </form>
     </main>
