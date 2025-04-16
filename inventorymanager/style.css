@@ -1,11 +1,24 @@
 body {
-    display: flex;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    'aside header'
+    'aside main'
+    ;
 }
 
 aside {
-    width: 30%;
+    grid-area: aside;
 }
 
 main {
-    width: 70%;
+    grid-area: main;
+    overflow: auto;
+}
+
+header {
+    grid-area: header;
 }
