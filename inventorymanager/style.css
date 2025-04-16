@@ -15,10 +15,37 @@ aside {
 }
 
 main {
+    background-color: #F7F7F7;
+    padding: 32px;
     grid-area: main;
     overflow: auto;
 }
 
 header {
     grid-area: header;
+}
+
+#product-table-container {
+    padding: 24px;
+    width: 100%;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+}
+
+#product-list-table {
+    width: 100%;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+}
+
+#product-list-table th,td {
+    border-bottom: 1px solid #E7E7E7;
+}
+
+#product-list-table > thead {
+    background-color: #F6F6F6;
+}
+
+#product-list-table > tbody {
+    background-color: #FFFFFF;
 }
