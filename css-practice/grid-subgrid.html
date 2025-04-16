@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+        }
+
+        .sub-container {
+            display: grid;
+            grid-template-columns: subgrid; /* Aligns with the parent grid's columns */
+            grid-template-rows: subgrid;    /* Optional for row alignment */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div>Main Item 1</div>
+    <div>
+      <div class="sub-container">
+        <div>Sub Item 1</div>
+        <div>Sub Item 2</div>
+      </div>
+    </div>
+    <div>Main Item 2</div>
+  </div>
+</body>
+</html>
