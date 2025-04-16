@@ -1,44 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <aside>
-        <img src="logo.svg" alt="logo">
-        <ul style="list-style-type: none">
-            <li><a href="">Dhashboard</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="">Transaction</a></li>
-            <li><a href="">Customers</a></li>
-            <li><a href="">Sales</a></li>
-            <li><a href="form.html">Form</a></li>
-        </ul>
+      <img src="logo.svg" alt="logo" />
+      <ul style="list-style-type: none">
+        <li><a href="">Dhashboard</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="">Transaction</a></li>
+        <li><a href="">Customers</a></li>
+        <li><a href="">Sales</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
     </aside>
     <main>
-        <header>This is header</header>
-        <h1>Form</h1>
-        <form action="product.html">
-            <label for="text">Text</label>
-            <input type="text" placeholder="text" name="text" id="text" required><br>
+      <header>This is header</header>
+      <h1>Form</h1>
+      <form id="inputTypesForm">
+        <label for="text">Text</label>
+        <input type="text" placeholder="text" name="text" id="text" /><br />
 
-            <label for="email">Email</label>
-            <input type="email" placeholder="email" name="email" id="email"><br>
+        <label for="email">Email</label>
+        <input type="email" placeholder="email" name="email" id="email" /><br />
 
-            <label for="password">password</label>
-            <input type="password" placeholder="password" name="password" id="password"><br>
+        <label for="password">password</label>
+        <input type="password"placeholder="password" name="password" id="password" /><br />
 
-            <label for="number">Number</label>
-            <input type="number" placeholder="number" name="number" id="number"><br>
+        <label for="number">Number</label>
+        <input type="number" placeholder="number" name="number" id="number" /><br />
 
-            <label for="range">Range</label>
-            <input type="range" placeholder="range" name="range" id="range" min="0" max="100" value="50"><br>
+        <label for="range">Range</label>
+        <input type="range" placeholder="range" name="range" id="range" min="0" max="100" value="50" /><br />
 
-            <button type="submit">Submit</button>
-        </form>
+        <label for="url">URL</label>
+        <input type="url" placeholder="https://example.com" name="url" id="url" /><br />
+
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" /><br />
+
+        <label for="datetime-local">DateTime Local</label>
+        <input type="datetime-local" name="datetime-local" id="datetime-local"/><br />
+
+        <label for="month">Month</label>
+        <input type="month" name="month" id="month" /><br />
+
+        <label for="week">Week</label>
+        <input type="week" name="week" id="week" /><br />
+
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time" /><br />
+
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color" /><br />
+
+        <label for="checkbox">Checkbox</label>
+        <input type="checkbox" name="checkbox" id="checkbox" /><br />
+
+        <label for="radio1">Radio 1</label>
+        <input type="radio" name="radio" id="radio1" value="1" /><br />
+
+        <label for="radio2">Radio 2</label>
+        <input type="radio" name="radio" id="radio2" value="2" /><br />
+
+        <label for="hidden">Hidden</label>
+        <input type="hidden" name="hidden" id="hidden" value="secret" /><br />
+
+        <button type="submit">Submit</button>
+      </form>
     </main>
-</body>
+    <script>
+      const form = document.getElementById("inputTypesForm");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+
+        for (let data of formData.entries()) {
+          console.log(`${data[0]}: ${data[1]}`);
+        }
+
+        let password = document.getElementById("password");
+        console.log("Pass value: " + password.value);
+        console.log("Pass Type: " + password.type);
+        console.log(password.attributes);
+      });
+    </script>
+  </body>
 </html>
