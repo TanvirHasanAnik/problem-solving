@@ -49,6 +49,7 @@ header {
 #add-product-button {
     border: none; 
     background: transparent;
+    cursor: pointer;
     padding: 0; 
     margin: 0; 
 }

@@ -20,11 +20,11 @@ form.addEventListener("submit", (event) => {
   try {
     for (let [name,value] of formData.entries()) {
       console.log(`${name}: ${value}`);
-      if(name === "product-id"){
+      if(name in product){
         if(!value.trim()){
             throw new Error(`${name} was not provided`);
         }else{
-            product.id = value.trim();
+            product[name] = value.trim();
         }
       }
     }
