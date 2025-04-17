@@ -19,6 +19,8 @@ main {
     padding: 32px;
     grid-area: main;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -26,13 +28,17 @@ header {
 }
 
 #product-table-container {
+    box-sizing: border-box;
     padding: 24px;
     width: 100%;
     border-radius: 24px;
     background-color: #FFFFFF;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 #product-list-table {
+    height: fit-content;
     width: 100%;
     border: 1px solid #E7E7E7;
     border-radius: 10px;
