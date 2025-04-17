@@ -22,7 +22,7 @@
     <header>This is header</header>
     <main>
       <h1>Add new product</h1>
-      <form id="inputTypesForm">
+      <form id="add-product-form">
         <label for="product-id">Product Id</label> <br>
         <input type="number" placeholder="Product id" name="product-id" id="product-id" /><br />
         
@@ -31,26 +31,25 @@
         
         <label for="product-price">Price</label> <br>
         <input type="number" placeholder="Product Price" name="product-price" id="product-price" /><br />
+        
+        <label for="product-Size">Size</label> <br>
+        <input type="number" placeholder="Product Size" name="product-Size" id="product-Size" /><br />
+        
+        <label for="product-quantity">Quantity</label> <br>
+        <input type="number" placeholder="Product Quantity" name="product-quantity" id="product-quantity" /><br />
+        
+        <label for="product-date">Date</label> <br>
+        <input type="datetime-local" placeholder="product-date" name="product-date" id="product-date" /><br />
+        
+        <label>Availability</label> <br>
 
+        <select name="availability" id="availability">
+          <option value="Available">Available</option>
+          <option value="Out of Stock">Out of Stock</option>
+        </select> <br>
         <button type="submit">Submit</button>
       </form>
     </main>
-    <script>
-      const form = document.getElementById("inputTypesForm");
-
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const formData = new FormData(form);
-
-        for (let data of formData.entries()) {
-          console.log(`${data[0]}: ${data[1]}`);
-        }
-
-        let password = document.getElementById("password");
-        console.log("Pass value: " + password.value);
-        console.log("Pass Type: " + password.type);
-        console.log(password.attributes);
-      });
-    </script>
+    <script src="add-product.js"></script>
   </body>
 </html>
