@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside>
+      <img src="logo.svg" alt="logo" />
+      <ul style="list-style-type: none">
+        <li><a href="">Dhashboard</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="">Transaction</a></li>
+        <li><a href="">Customers</a></li>
+        <li><a href="">Sales</a></li>
+        <li><a href="add-product.html">Add Product</a></li>
+        <li><a href="form.html">Form</a></li>
+      </ul>
+    </aside>
+    <header>This is header</header>
+    <main>
+      <h1>Add new product</h1>
+      <form id="inputTypesForm">
+        <label for="product-id">Product Id</label> <br>
+        <input type="number" placeholder="Product id" name="product-id" id="product-id" /><br />
+        
+        <label for="product-name">Product Name</label> <br>
+        <input type="text" placeholder="Product Name" name="product-name" id="product-name" /><br />
+        
+        <label for="product-price">Price</label> <br>
+        <input type="number" placeholder="Product Price" name="product-price" id="product-price" /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <script>
+      const form = document.getElementById("inputTypesForm");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+
+        for (let data of formData.entries()) {
+          console.log(`${data[0]}: ${data[1]}`);
+        }
+
+        let password = document.getElementById("password");
+        console.log("Pass value: " + password.value);
+        console.log("Pass Type: " + password.type);
+        console.log(password.attributes);
+      });
+    </script>
+  </body>
+</html>
