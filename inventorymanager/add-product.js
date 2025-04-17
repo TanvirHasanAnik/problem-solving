@@ -31,6 +31,6 @@ form.addEventListener("submit", (event) => {
   } catch (error) {
     alert(`${error.message}`);
   }
-
   console.log(product);
+  localStorage.setItem("product",JSON.stringify(product));
 });
