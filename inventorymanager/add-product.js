@@ -32,5 +32,18 @@ form.addEventListener("submit", (event) => {
     alert(`${error.message}`);
   }
   console.log(product);
-  localStorage.setItem("product",JSON.stringify(product));
+  addNewProduct("product",product);
+  console.log(localStorage.getItem("product"));
 });
+
+function addNewProduct(key,productObject) {
+  let existingProduct = JSON.parse(localStorage.getItem(key));
+  if(!existingProduct){
+    existingProduct = [];
+  }else if(!Array.isArray(existingProduct)){
+    existingProduct = [existingProduct];
+  }
+  existingProduct.push(productObject);
+  let productJSON = JSON.stringify(existingProduct);
+  localStorage.setItem("product",productJSON);
+}
