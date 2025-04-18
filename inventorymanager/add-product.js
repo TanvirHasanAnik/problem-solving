@@ -11,19 +11,20 @@ form.addEventListener("submit", (event) => {
     for (let [name,value] of formData.entries()) {
       console.log(`${name}: ${value}`);
       if(name in product){
-        if(!value.trim()){
+        if(value.trim() == "" || value.trim() == null){
             throw new Error(`${name} was not provided`);
         }else{
             product[name] = value.trim();
         }
       }
     }
+    console.log(product);
+    addNewProduct("product",product);
+    console.log(localStorage.getItem("product"));
+    window.location.href = "product.html";
   } catch (error) {
     alert(`${error.message}`);
   }
-  console.log(product);
-  addNewProduct("product",product);
-  console.log(localStorage.getItem("product"));
 });
 
 function addNewProduct(key,productObject) {
