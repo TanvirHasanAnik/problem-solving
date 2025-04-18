@@ -81,6 +81,7 @@ header {
 
 #product-list-table th,td {
     border-bottom: 1px solid #E7E7E7;
+    text-align: center;
 }
 
 #add-product-form input, select{

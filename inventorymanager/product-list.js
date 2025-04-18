@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         row.setAttribute("id",element.id);
         row.innerHTML += `
             <td><input type="checkbox"></td>
-            <td>
+            <td style="display: flex; flex-direction: row;">
                 <img src="sneaker1.svg" alt="product img" width="42px" height="42px">
                 <div>
                     <span>${element.id}</span> <br>
