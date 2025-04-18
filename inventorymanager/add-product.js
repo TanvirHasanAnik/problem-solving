@@ -1,16 +1,6 @@
+import { Product } from "./shape/product.js";
 
 const form = document.getElementById("add-product-form");
-
-function Product(){
-    this.id = null;
-    this.name = null;
-    this.price = null;
-    this.size = null;
-    this.quantity = null;
-    this.date = null;
-    this.availability = null;
-}
-
 let product = new Product();
 
 form.addEventListener("submit", (event) => {
