@@ -27,6 +27,35 @@ header {
     grid-area: header;
 }
 
+.navigation-list {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 32px;
+    padding: 0;
+}
+
+.navigation-list-item {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 12px;
+}
+
+.navigation-list-item-active {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #D9EDFF;
+    border-radius: 12px;
+}
+
+.navigation-list-item > a {
+    color: #888888;
+    text-decoration: none;
+}
+
 #product-table-container {
     box-sizing: border-box;
     padding: 24px;

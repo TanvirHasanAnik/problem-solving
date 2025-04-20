@@ -1,4 +1,10 @@
 import { Product } from "./shape/product.js";
+import { loadNavigationBar } from "./navigation.js";
+
+document.addEventListener("DOMContentLoaded",(event) => {
+  loadNavigationBar();
+});
+
 
 const form = document.getElementById("add-product-form");
 let product = new Product();

@@ -1,3 +1,5 @@
+import { loadNavigationBar } from "./navigation.js";
+
 let addProductButton = document.getElementById("add-product-button");
 let tbody = document.getElementById("product-table-tbody");
 addProductButton.addEventListener('click', (event) => {
@@ -10,6 +12,7 @@ let productList = JSON.parse(localStorage.getItem('product'));
 console.log(productList);
 
 document.addEventListener('DOMContentLoaded', (event) => {
+    loadNavigationBar();
     productList.forEach(element => {
         let row = document.createElement("tr");
         row.setAttribute("id",element.id);
