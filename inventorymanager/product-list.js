@@ -8,11 +8,7 @@ addProductButton.addEventListener('click', (event) => {
 });
 
 let productList = JSON.parse(localStorage.getItem('product'));
-
-console.log(productList);
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    loadNavigationBar();
+function loadProductList(){
     productList.forEach(element => {
         let row = document.createElement("tr");
         row.setAttribute("id",element.id);
@@ -35,12 +31,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
         row.innerHTML += `
             <td>
-                <button type="button"><img src="view-icon.svg" alt="view icon" width="18px" height="19px"></button>
-                <button type="button"><img src="edit-icon.svg" alt="edit icon" width="18px" height="19px"></button>
-                <button type="button"><img src="delete-icon.svg" alt="delete icon" width="18px" height="19px"></button>
+                <button type="button" id="view-button" class="product-action-button"><img src="view-icon.svg" alt="view icon" width="18px" height="19px"></button>
+                <button type="button" id="edit-button" class="product-action-button"><img src="edit-icon.svg" alt="edit icon" width="18px" height="19px"></button>
+                <button type="button" id="delete-button" class="product-action-button" product-id="${element.id}"><img src="delete-icon.svg" alt="delete icon" width="18px" height="19px"></button>
             </td>
         `;
 
         tbody.appendChild(row);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    loadNavigationBar();
+    loadProductList();
+    tbody.addEventListener('click', (event) => {
+        const deleteButton = event.target.closest("#delete-button");
+        if (deleteButton) {
+            const productId = deleteButton.getAttribute("product-id");
+    
+            // Filter the productList to remove the deleted product
+            productList = productList.filter(product => product.id !== productId);
+    
+            // Update localStorage with the new product list
+            localStorage.setItem('product', JSON.stringify(productList));
+    
+            // Remove the row from the table
+            const row = deleteButton.closest('tr');
+            row.remove();
+        }
     });
 });

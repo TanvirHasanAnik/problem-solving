@@ -89,6 +89,12 @@ a:visited {
     padding: 0; 
     margin: 0; 
 }
+
+.product-action-button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
 #product-list-table {
     width: 100%;
     border: 1px solid #E7E7E7;
