@@ -41,7 +41,7 @@ function loadProductList(){
     });
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (Loadevent) => {
     loadNavigationBar();
     loadProductList();
     tbody.addEventListener('click', (event) => {
