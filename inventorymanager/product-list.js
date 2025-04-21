@@ -52,7 +52,7 @@ function loadProductList(){
         row.innerHTML += `
             <td>
                 <button type="button" id="view-button" class="product-action-button"><img src="view-icon.svg" alt="view icon" width="18px" height="19px"></button>
-                <button type="button" id="edit-button" class="product-action-button"><img src="edit-icon.svg" alt="edit icon" width="18px" height="19px"></button>
+                <button type="button" id="edit-button" class="product-action-button" product-id="${element.id}"><img src="edit-icon.svg" alt="edit icon" width="18px" height="19px"></button>
                 <button type="button" id="delete-button" class="product-action-button" product-id="${element.id}"><img src="delete-icon.svg" alt="delete icon" width="18px" height="19px"></button>
             </td>
         `;
@@ -66,12 +66,17 @@ document.addEventListener('DOMContentLoaded', (Loadevent) => {
     loadProductList();
     tbody.addEventListener('click', (event) => {
         const deleteButton = event.target.closest("#delete-button");
+        const editButton = event.target.closest("#edit-button");
         if (deleteButton) {
             const productId = Number(deleteButton.getAttribute("product-id"));
             productList = productList.filter(product => product.id !== productId);
             localStorage.setItem('product', JSON.stringify(productList));
             tbody.innerHTML = "";
             loadProductList();
+        }
+        if(editButton){
+            const productId = Number(editButton.getAttribute("product-id"));
+            window.location.href = `add-product.html?id=${productId}`;
         }
     });
 });
