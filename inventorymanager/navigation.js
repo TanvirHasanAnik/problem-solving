@@ -8,20 +8,31 @@ export function loadNavigationBar(){
   pageList.className = "navigation-list";
   const currentPage = window.location.pathname.split("/").pop();
 
-  for(let key in pages){
+  for(let title in pages){
+    let listItemWrapper = document.createElement("div");
+    listItemWrapper.className = "list_item_wrapper";
+    listItemWrapper.setAttribute("link",pages[title]);
     let listItem = document.createElement("li");
-    if(pages[key] === currentPage){
+    if(pages[title] === currentPage){
         listItem.className = "navigation-list-item-active";
     }else{
         listItem.className = "navigation-list-item";
     }
-    let anchorLink = document.createElement("a");
-    anchorLink.textContent = key;
-    anchorLink.setAttribute("href",pages[key]);
-    listItem.appendChild(anchorLink);
-    pageList.appendChild(listItem);
+    listItem.textContent = title;
+    listItemWrapper.appendChild(listItem);
+    pageList.appendChild(listItemWrapper);
   }
+  
+  pageList.addEventListener("click", (clickEvent) => {
+    let wrapper = clickEvent.target.closest(".list_item_wrapper");
+    if (wrapper) {
+      const link = wrapper.getAttribute("link");
+      if (link) {
+        window.location.href = link;
+      }
+    }
+  });
 
-  let sidePanel = document.getElementsByTagName("aside")[0];
+  let sidePanel = document.getElementsByClassName("navigation_wrapper")[0];
   sidePanel.appendChild(pageList);
 }
