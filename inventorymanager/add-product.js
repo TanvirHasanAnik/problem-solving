@@ -25,6 +25,11 @@ form.addEventListener("submit", async (event) => {
   const formData = new FormData(form);
 
   try {
+    let currentPrdouct = JSON.parse(localStorage.getItem("product"));
+    if(currentPrdouct.length > 0){
+      let lastElementId = Number(currentPrdouct[currentPrdouct.length - 1].id);
+      product.id = lastElementId + 1;
+    }
     for (let [name,value] of formData.entries()) {
       console.log(`${name}: ${value}`);
       if(name in product){
