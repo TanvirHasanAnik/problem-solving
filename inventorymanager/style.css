@@ -72,13 +72,12 @@ header {
 }
 
 .navigation-list {
-    padding: 16px;
-    padding-right: 16px;
-    padding-top: 32px;
+    margin-top: 32px;
     padding: 0;
 }
 
 .list_item_wrapper {
+    margin-bottom: 10px;
     cursor: pointer;
 }
 
@@ -88,6 +87,7 @@ header {
     padding-left: 32px;
     padding-right: 32px;
     border-radius: 12px;
+    color: #888888;
 }
 
 .navigation-list-item-active {
@@ -98,6 +98,7 @@ header {
     padding-right: 32px;
     background-color: #D9EDFF;
     border-radius: 12px;
+    color: #454545;
 }
 
 .navigation-list-item > a {
