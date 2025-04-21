@@ -70,12 +70,15 @@ header {
     align-items: start;
 }
 
-.navigation_wrapper {
+.sidepanel_center_wrapper {
     width: 247px;
 }
 
-.navigation-list {
+.navigation_wrapper {
     margin-top: 32px;
+}
+
+.navigation-list {
     padding: 0;
 }
 
@@ -91,6 +94,8 @@ header {
     padding-right: 32px;
     border-radius: 12px;
     color: #888888;
+    font-size: 14px;
+    line-height: 150%;
 }
 
 .navigation-list-item-active {
@@ -102,6 +107,8 @@ header {
     background-color: #D9EDFF;
     border-radius: 12px;
     color: #454545;
+    font-size: 14px;
+    line-height: 150%;
 }
 
 .navigation-list-item > a {

@@ -21,6 +21,7 @@ export function loadNavigationBar(){
     listItem.textContent = title;
     listItemWrapper.appendChild(listItem);
     pageList.appendChild(listItemWrapper);
+    document.getElementsByClassName("navigation_wrapper")[0].appendChild(pageList);
   }
   
   pageList.addEventListener("click", (clickEvent) => {
