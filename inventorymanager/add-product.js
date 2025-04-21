@@ -5,11 +5,22 @@ document.addEventListener("DOMContentLoaded",(event) => {
   loadNavigationBar();
 });
 
-
 const form = document.getElementById("add-product-form");
 let product = new Product();
 
-form.addEventListener("submit", (event) => {
+function showLoadingScreen(duration) {
+  const loadingScreen = document.getElementById("loading-screen");
+  loadingScreen.style.display = "flex";
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      loadingScreen.style.display = "none";
+      resolve();
+    }, duration);
+  });
+}
+
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const formData = new FormData(form);
 
@@ -24,10 +35,12 @@ form.addEventListener("submit", (event) => {
         }
       }
     }
-    console.log(product);
-    addNewProduct("product",product);
-    console.log(localStorage.getItem("product"));
-    window.location.href = "product.html";
+
+    showLoadingScreen(3000)
+      .then(() => {
+        addNewProduct("product",product);
+        window.location.href = "product.html";
+      });
   } catch (error) {
     alert(`${error.message}`);
   }

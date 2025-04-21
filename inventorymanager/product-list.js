@@ -7,6 +7,19 @@ addProductButton.addEventListener('click', (event) => {
     window.location.href = "add-product.html";
 });
 
+function filterPropertyValue(object,key){
+    let value = object[key];
+    if(value){
+        if(key === "date" ){
+            let date_time = value.split("T");
+            return date_time;
+        }
+        else{
+            return value;
+        }
+    }
+}
+
 let productList = JSON.parse(localStorage.getItem('product'));
 function loadProductList(){
     productList.forEach(element => {
@@ -24,7 +37,14 @@ function loadProductList(){
         for(let key in element){
             if(key !== "id" && key !== "name"){
                 let tableData = document.createElement("td");
-                tableData.textContent = element[key];
+                let propertyValue = filterPropertyValue(element,key);
+                if(key === "date"){
+                    tableData.append(propertyValue[0]);
+                    tableData.append(document.createElement("br"));
+                    tableData.append(`at ${propertyValue[1]}`);
+                }else{
+                    tableData.textContent = propertyValue;
+                }
                 row.appendChild(tableData);
             }
         }
