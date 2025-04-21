@@ -1,58 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
-  </head>
-  <body>
+</head>
+<body>
     <aside>
-      <img style="margin-top: 32px; margin-left: 24px;" src="logo.svg" alt="logo" />
+        <div class="logo_wrapper">
+            <img src="logo.svg" alt="logo">
+            <img src="exit.svg" alt="exit">
+        </div>
+        <div class="sidepanel_center_wrapper">
+            <div class="store-wrapper">
+                <img src="store_logo.svg" alt="store logo">
+                <div class="store-title-wrapper">
+                    <span style="color: #B0B0B0; font-size: 12px; line-height: 140%;">Company</span>
+                    <span style="color: #454545; font-weight: 800; font-size: 14px; line-height: 150%;">Kanky store</span>
+                </div>
+            </div>
+            <div class="navigation_wrapper">
+                <span style="padding-left: 8px; padding-right: 8px; color: #727272; font-size: 14px; line-height: 150%;">GENERAL</span>
+            </div>
+        </div>
+        <div class="footer_wrapper"></div>
     </aside>
-    <header>This is header</header>
     <main>
-      <h1>Add new product</h1>
-      <form action="product.html" id="add-product-form">
-        <label for="name">Product Name</label> <br>
-        <input type="text" placeholder="Product Name" name="name" id="product-name" /><br />
-        
-        <label for="price">Price</label> <br>
-        <input type="number" placeholder="price" name="price" id="product-price" /><br />
-        
-        <label for="size">Size</label> <br>
-        <input type="number" placeholder="size" name="size" id="product-Size" /><br />
-        
-        <label for="quantity">Quantity</label> <br>
-        <input type="number" placeholder="quantity" name="quantity" id="product-quantity" /><br />
-        
-        <label for="date">Date</label> <br>
-        <input type="datetime-local" placeholder="date" name="date" id="product-date" /><br />
-        
-        <label>Availability</label> <br>
-
-        <select name="availability" id="availability">
-          <option value="Available">Available</option>
-          <option value="Out of Stock">Out of Stock</option>
-        </select> <br>
-        <button type="submit">Submit</button>
-      </form>
+        <header>
+            <div class="search_input_wrapper">
+                <input type="text" class="search_input" placeholder="Search Product">
+                <img src="search.svg" alt="">
+            </div>
+            <div class="notification_profile_wrapper">
+                <div class="notification_wrapper">
+                    <img src="message-notification-icon.svg" alt="message icon">
+                    <img src="bell-notification-icon.svg" alt="bell icon">
+                </div>
+                <div style="width: 2px; height: 34px; background-color: #C9C9C9;"></div>
+                <div class="profile_wrapper">
+                    <img src="profile-picture.svg" alt="profile picture">
+                    <div class="profile_name_wrapper">
+                        <span style="color: #2A2A2A; font-weight: bold; font-size: 16px; line-height: 150%;">Guy Hawkins</span>
+                        <span style="color: #727272; font-size: 12px; line-height: 140%;">Admin</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main_body_wrapper">
+            <h1>Add new product</h1>
+            <form action="product.html" id="add-product-form">
+              <label for="name">Product Name</label> <br>
+              <input type="text" placeholder="Product Name" name="name" id="product-name" /><br />
+              
+              <label for="price">Price</label> <br>
+              <input type="number" placeholder="price" name="price" id="product-price" /><br />
+              
+              <label for="size">Size</label> <br>
+              <input type="number" placeholder="size" name="size" id="product-Size" /><br />
+              
+              <label for="quantity">Quantity</label> <br>
+              <input type="number" placeholder="quantity" name="quantity" id="product-quantity" /><br />
+              
+              <label for="date">Date</label> <br>
+              <input type="datetime-local" placeholder="date" name="date" id="product-date" /><br />
+              
+              <label>Availability</label> <br>
+      
+              <select name="availability" id="availability">
+                <option value="Available">Available</option>
+                <option value="Out of Stock">Out of Stock</option>
+              </select> <br>
+              <button type="submit">Submit</button>
+            </form>
+        </div>
     </main>
     <script type="module" src="add-product.js"></script>
-
-    <div id="loading-screen" style="
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: grey;
-      color: white;
-      font-size: 24px;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    ">
-      Loading, please wait...
+    <div id="loading-screen" style="display: none; position: fixed; inset: 0; background: rgba(255,255,255,0.8); justify-content: center; align-items: center; z-index: 9999;">
+      <p>Loading...</p>
     </div>
-  </body>
+</body>
 </html>
