@@ -67,17 +67,11 @@ document.addEventListener('DOMContentLoaded', (Loadevent) => {
     tbody.addEventListener('click', (event) => {
         const deleteButton = event.target.closest("#delete-button");
         if (deleteButton) {
-            const productId = deleteButton.getAttribute("product-id");
-    
-            // Filter the productList to remove the deleted product
+            const productId = Number(deleteButton.getAttribute("product-id"));
             productList = productList.filter(product => product.id !== productId);
-    
-            // Update localStorage with the new product list
             localStorage.setItem('product', JSON.stringify(productList));
-    
-            // Remove the row from the table
-            const row = deleteButton.closest('tr');
-            row.remove();
+            tbody.innerHTML = "";
+            loadProductList();
         }
     });
 });

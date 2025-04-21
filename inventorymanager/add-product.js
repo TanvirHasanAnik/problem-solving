@@ -1,5 +1,5 @@
-import { Product } from "./shape/product.js";
 import { loadNavigationBar } from "./navigation.js";
+import { Product } from "./shape/product.js";
 
 document.addEventListener("DOMContentLoaded",(event) => {
   loadNavigationBar();
@@ -26,9 +26,15 @@ form.addEventListener("submit", async (event) => {
 
   try {
     let currentPrdouct = JSON.parse(localStorage.getItem("product"));
-    if(currentPrdouct.length > 0){
-      let lastElementId = Number(currentPrdouct[currentPrdouct.length - 1].id);
-      product.id = lastElementId + 1;
+    if(currentPrdouct){
+      if(currentPrdouct.length > 0){
+        let lastElementId = Number(currentPrdouct[currentPrdouct.length - 1].id);
+        product.id = lastElementId + 1;
+      }else{
+        product.id = 1;
+      }
+    }else{
+      product.id = 1;
     }
     for (let [name,value] of formData.entries()) {
       console.log(`${name}: ${value}`);
