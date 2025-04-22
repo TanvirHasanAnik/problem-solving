@@ -381,6 +381,32 @@ header {
     color: #1A71F6;
 }
 
+.available_wrapper{
+    font-size: 12px;
+    line-height: 140%;
+    color: #04910C;
+    background-color: #B2FFB4;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.out_of_stock_wrapper{
+    font-size: 12px;
+    line-height: 140%;
+    color: #FF0000;
+    background-color: #FFDCDC;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
 #add-product-form input, select{
     margin-bottom: 24px;
 }

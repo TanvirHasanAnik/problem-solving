@@ -44,7 +44,17 @@ function loadProductList(){
                     tableData.append(propertyValue[0]);
                     tableData.append(document.createElement("br"));
                     tableData.append(`at ${propertyValue[1]}`);
-                }else{
+                }else if(key == "price"){
+                    propertyValue = "$"+propertyValue;
+                    tableData.textContent = propertyValue;
+                }else if(key == "availability"){
+                    let availability_wrapper = document.createElement("div");
+                    element[key] == "Available" ? availability_wrapper.className = "available_wrapper" : availability_wrapper.className = "out_of_stock_wrapper";
+                    availability_wrapper.textContent = propertyValue;
+                    tableData.appendChild(availability_wrapper);
+
+                }
+                else{
                     tableData.textContent = propertyValue;
                 }
                 row.appendChild(tableData);
@@ -53,9 +63,11 @@ function loadProductList(){
     
         row.innerHTML += `
             <td>
-                <button type="button" id="view-button" class="product-action-button"><img src="view-icon.svg" alt="view icon" width="18px" height="19px"></button>
-                <button type="button" id="edit-button" class="product-action-button" product-id="${element.id}"><img src="edit-icon.svg" alt="edit icon" width="18px" height="19px"></button>
-                <button type="button" id="delete-button" class="product-action-button" product-id="${element.id}"><img src="delete-icon.svg" alt="delete icon" width="18px" height="19px"></button>
+                <div class="product_action_button_wrapper">
+                    <button type="button" id="view-button" class="product-action-button"><img src="view-icon.svg" alt="view icon" width="18px" height="19px"></button>
+                    <button type="button" id="edit-button" class="product-action-button" product-id="${element.id}"><img src="edit-icon.svg" alt="edit icon" width="18px" height="19px"></button>
+                    <button type="button" id="delete-button" class="product-action-button" product-id="${element.id}"><img src="delete-icon.svg" alt="delete icon" width="18px" height="19px"></button>
+                </div>
             </td>
         `;
 
