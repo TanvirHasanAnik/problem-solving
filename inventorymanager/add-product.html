@@ -60,32 +60,34 @@
                 </div>
             </div>
 
-            <div id="product-table-container">
-                <h1>Add new product</h1>
-                <form action="product.html" id="add-product-form">
-                  <label for="name">Product Name</label> <br>
-                  <input type="text" placeholder="Product Name" name="name" id="product-name" /><br />
-                  
-                  <label for="price">Price</label> <br>
-                  <input type="number" placeholder="price" name="price" id="product-price" /><br />
-                  
-                  <label for="size">Size</label> <br>
-                  <input type="number" placeholder="size" name="size" id="product-Size" /><br />
-                  
-                  <label for="quantity">Quantity</label> <br>
-                  <input type="number" placeholder="quantity" name="quantity" id="product-quantity" /><br />
-                  
-                  <label for="date">Date</label> <br>
-                  <input type="datetime-local" placeholder="date" name="date" id="product-date" /><br />
-                  
-                  <label>Availability</label> <br>
-          
-                  <select name="availability" id="availability">
-                    <option value="Available">Available</option>
-                    <option value="Out of Stock">Out of Stock</option>
-                  </select> <br>
-                  <button type="submit">Submit</button>
-                </form>
+            <div class="add_product_wrapper">
+                <span style="color: #454545; font-size: 22px; line-height: 130%; padding-bottom: 16px;">Add product</span>
+                <div>
+                    <form action="product.html" id="add-product-form">
+                      <label for="name">Product Name</label> <br>
+                      <input type="text" placeholder="Product Name" name="name" id="product-name" /><br />
+                      
+                      <label for="price">Price</label> <br>
+                      <input type="number" placeholder="price" name="price" id="product-price" /><br />
+                      
+                      <label for="size">Size</label> <br>
+                      <input type="number" placeholder="size" name="size" id="product-Size" /><br />
+                      
+                      <label for="quantity">Quantity</label> <br>
+                      <input type="number" placeholder="quantity" name="quantity" id="product-quantity" /><br />
+                      
+                      <label for="date">Date</label> <br>
+                      <input type="datetime-local" placeholder="date" name="date" id="product-date" /><br />
+                      
+                      <label>Availability</label> <br>
+              
+                      <select name="availability" id="availability">
+                        <option value="Available">Available</option>
+                        <option value="Out of Stock">Out of Stock</option>
+                      </select> <br>
+                      <button type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

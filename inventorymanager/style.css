@@ -186,6 +186,16 @@ header {
     flex-direction: column;
 }
 
+.add_product_wrapper{
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
 .table_action_wrapper {
     display: flex;
     flex-direction: row;
