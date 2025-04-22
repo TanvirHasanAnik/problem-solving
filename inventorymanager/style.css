@@ -21,15 +21,6 @@ main {
     flex-direction: column;
 }
 
-
-.main_body_wrapper {
-    background-color: #F7F7F7;
-    padding: 32px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-}
-
 header {
     background-color: white;
     width: 100%;
@@ -177,23 +168,51 @@ header {
     gap: 2.5px;
 }
 
-#product-table-container {
-    box-sizing: border-box;
-    padding: 24px;
-    width: 100%;
-    border-radius: 24px;
-    background-color: #FFFFFF;
-    flex-grow: 1;
-    overflow-y: auto;
+.main_body_wrapper {
+    background-color: #F7F7F7;
+    padding: 32px;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
 
-#table-button-container {
+#product-table-container {
+    box-sizing: border-box;
+    padding: 24px;
+    width: 1097px;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.table_action_wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    padding: 24px;
+    justify-content: space-between;
+    padding-bottom: 24px;
+}
+
+
+
+.table_search_input_wrapper{
+    height: 40px;
+    width: 500px;
+    border-radius: 12px;
+    border: 1.6px solid #B0B0B0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+}
+
+.table-button-wrapper{
+    display: flex;
+    gap: 12px;
 }
 
 #add-product-button {
