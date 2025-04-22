@@ -148,7 +148,7 @@ header {
 }
 
 .search_input, .search_input:active {
-    height: 21px;
+    height: 24px;
     width: 240px;
     border: none;
     outline: none;
@@ -208,6 +208,15 @@ header {
     padding-right: 16px;
     padding-top: 9.5px;
     padding-bottom: 9.5px;
+}
+
+
+
+.table_search_input, .table_search_input:active {
+    height: 24px;
+    width: 684px;
+    border: none;
+    outline: none;
 }
 
 .table-button-wrapper{
@@ -276,18 +285,16 @@ header {
     width: 100%;
     border: 1px solid #E7E7E7;
     border-radius: 10px;
-    flex-grow: 1;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
     margin-bottom: 24px;
 }
 
-#product-list-table > thead {
+.product_table_head {
     background-color: #F6F6F6;
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 
-#product-list-table > tbody {
+#product-table-tbody{
     background-color: #FFFFFF;
     flex-grow: 1;
     overflow-y: auto;
