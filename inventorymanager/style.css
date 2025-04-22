@@ -280,6 +280,7 @@ header {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: 24px;
 }
 
 #product-list-table > thead {
@@ -305,4 +306,27 @@ header {
 
 #add-product-form input, select{
     margin-bottom: 24px;
+}
+
+.page_selection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.change_page {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.change_page_select{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.change_page_iterate {
+    display: flex;
+    align-items: start;
+    gap: 6px;
 }
