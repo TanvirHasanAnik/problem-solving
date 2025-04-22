@@ -237,12 +237,26 @@ header {
     padding-bottom: 4px;
 }
 
+.active_filter > span {
+    color: #1A71F6; 
+    font-weight: bold; 
+    font-size: 14px; 
+    line-height: 150%;
+}
+
 .inactive_filter{
     width: 250px;
     display: flex;
     justify-content: center;
     padding-top: 4px;
     padding-bottom: 4px;
+}
+
+.inactive_filter > span {
+    color: #737373; 
+    font-weight: bold; 
+    font-size: 14px; 
+    line-height: 150%;
 }
 
 #add-product-button {
