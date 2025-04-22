@@ -26,7 +26,7 @@ function loadProductList(){
         let row = document.createElement("tr");
         row.setAttribute("id",element.id);
         row.innerHTML += `
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="checkbox_input"</td>
             <td>
                 <div class="product_data_wrapper">
                     <img src="sneaker1.svg" alt="product img" width="42px" height="42px">
