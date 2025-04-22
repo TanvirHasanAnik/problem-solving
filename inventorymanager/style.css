@@ -287,6 +287,16 @@ header {
     margin-bottom: 24px;
 }
 
+#product-list-table th {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+#product-list-table td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
 /* .product_table_head {
 } */
 
