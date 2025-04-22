@@ -358,6 +358,7 @@ header {
 
 #product-list-table th,td {
     text-align: left;
+    vertical-align: top;
 }
 
 .product_data_wrapper{
