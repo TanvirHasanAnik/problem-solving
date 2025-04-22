@@ -196,6 +196,32 @@ header {
     flex-direction: column;
 }
 
+.input_label {
+    color: #323130;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: bold;
+}
+
+.input_custom {
+    height: 52px;
+    width: 552px;
+    border-radius: 12px;
+    border: 1.6px solid #B0B0B0;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+}
+
+.label_input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: start;
+}
+
 .table_action_wrapper {
     display: flex;
     flex-direction: row;
@@ -278,7 +304,7 @@ header {
     line-height: 150%;
 }
 
-#add-product-button {
+.image_button {
     border: none; 
     background: transparent;
     cursor: pointer;
