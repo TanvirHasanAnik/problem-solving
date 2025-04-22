@@ -215,6 +215,36 @@ header {
     gap: 12px;
 }
 
+.table_filter_wrapper {
+    display: flex;
+    height: 45px;
+    border: 1.6px solid #B0B0B0;
+    border-radius: 14px;
+    align-items: center;
+    gap: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 24px;
+}
+
+.active_filter{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    background-color: #D9EDFF;
+    border-radius: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.inactive_filter{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 #add-product-button {
     border: none; 
     background: transparent;
