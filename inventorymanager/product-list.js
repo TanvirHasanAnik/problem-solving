@@ -27,11 +27,13 @@ function loadProductList(){
         row.setAttribute("id",element.id);
         row.innerHTML += `
             <td><input type="checkbox"></td>
-            <td style="display: flex; flex-direction: row;">
-                <img src="sneaker1.svg" alt="product img" width="42px" height="42px">
-                <div>
-                    <span>${element.id}</span> <br>
-                    ${element.name}
+            <td>
+                <div class="product_data_wrapper">
+                    <img src="sneaker1.svg" alt="product img" width="42px" height="42px">
+                    <div class="id_name_wrapper">
+                        <span class="product_id_wrapper">${element.id}</span>
+                        ${element.name}
+                    </div>
                 </div>
             </td>`;
         for(let key in element){
