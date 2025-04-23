@@ -330,6 +330,35 @@ header {
     font-size: 14px;
     line-height: 150%;
 }
+#checkbox_th { 
+    width: 48px;
+}
+#product_th { 
+    width: 250px;
+}
+#price_th { 
+    width: 120px;
+}
+#size_th { 
+    width: 120px;
+}
+#qty_th { 
+    width: 100px;
+}
+#date_th { 
+    width: 150px;
+}
+#status_th { 
+    width: 130px;
+}
+#action_th { 
+    width: 131px;
+}
+
+
+
+
+
 
 #product-list-table th:first-child {
     padding-top: 14px;
@@ -341,6 +370,7 @@ header {
 }
 
 #product-list-table td {
+    
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 12px;
@@ -458,6 +488,10 @@ header {
     padding-right: 8px;
     border-radius: 10px;
     display: inline-block;
+}
+
+.product_action_button_wrapper{
+    width: fit-content;
 }
 
 #add-product-form input, select{
