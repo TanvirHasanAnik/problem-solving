@@ -82,8 +82,9 @@ document.addEventListener('DOMContentLoaded', (Loadevent) => {
         const deleteButton = event.target.closest("#delete-button");
         const editButton = event.target.closest("#edit-button");
         if (deleteButton) {
-            const productId = Number(deleteButton.getAttribute("product-id"));
-            productList = productList.filter(product => product.id !== productId);
+            const productId = deleteButton.getAttribute("product-id");
+            productList = productList.filter(product => Number(product.id) !== Number(productId));
+
             localStorage.setItem('product', JSON.stringify(productList));
             tbody.innerHTML = "";
             loadProductList();
