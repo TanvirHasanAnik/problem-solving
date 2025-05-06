@@ -51,9 +51,10 @@ const users: User[] = [
     {username:"Anik", role: "admin"}
 ]
 
-function fetchUserDetails(username: string){
+function fetchUserDetails(username: string): User {
     const user = users.find(user => user.username.toLowerCase === username.toLowerCase)
     if(!user){
         throw new Error(`${username} not found`)
     }
+    return user
 }
