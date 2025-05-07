@@ -41,15 +41,28 @@ type userRole = "guest" | "member" | "admin"
 let role: userRole = "guest"
 
 type User = {
+    id: number
     username: string
     role: userRole
 }
 
+type updatedUser = Partial<User>
+let nextUserId = 1
 const users: User[] = [
-    {username:"Tanvir", role: "guest"},
-    {username:"Hassan", role: "member"},
-    {username:"Anik", role: "admin"}
+    {id: nextUserId++,username:"Tanvir", role: "guest"},
+    {id: nextUserId++,username:"Hassan", role: "member"},
+    {id: nextUserId++,username:"Anik", role: "admin"}
 ]
+
+function updateUser(id: number, updates:updatedUser){
+    const user = users.find(user => user.id === id)
+    if(!user){
+        return 
+    }
+    Object.assign(user,updates)
+}
+
+updateUser(1,{username: "SUFFER ME"})
 
 function fetchUserDetails(username: string): User {
     const user = users.find(user => user.username.toLowerCase === username.toLowerCase)
@@ -58,3 +71,25 @@ function fetchUserDetails(username: string): User {
     }
     return user
 }
+
+function addNewUser(newUser: Omit<User, "id">): User {
+    const user: User = {
+        id: nextUserId++,
+        ...newUser
+    }
+    users.push(user)
+    return user
+}
+
+
+const gameScore = [1,2,3,4,5,6,7]
+const stringArr = ["Hello", "TypeScript"]
+const objArr = [{name:"hi"},{name:"hello"}]
+
+function getLastItem<PlaceHolderType>(array: PlaceHolderType[]){
+    return array[array.length - 1]
+}
+
+console.log(getLastItem(gameScore))
+console.log(getLastItem(stringArr))
+console.log(getLastItem(objArr))
